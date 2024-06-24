@@ -2,10 +2,14 @@ package com.riwi.Library.Management.infrastructure.abstractServices;
 
 import org.springframework.data.domain.Page;
 
-public interface CRUDService <RQ,RS,Long> {
+public interface CRUDService <RQ,RS, ID> {
 
-    public void delete(Long id);
     public RS create(RQ request);
-    public RS update(Long id,RQ request);
     public Page<RS> getAll(int page, int size);
+    public RS update(RQ request,ID id);
+    RS get(ID id);
+    public void delete(ID id);
+
+
+
 }

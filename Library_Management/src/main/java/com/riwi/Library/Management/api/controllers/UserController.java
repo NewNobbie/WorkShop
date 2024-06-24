@@ -1,32 +1,32 @@
 package com.riwi.Library.Management.api.controllers;
 
-import com.riwi.Library.Management.api.request.UserReq;
-import com.riwi.Library.Management.api.response.UserResponse;
+import com.riwi.Library.Management.api.dtos.request.UserReq;
+import com.riwi.Library.Management.api.dtos.response.UserBasicResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
 @Controller
 @AllArgsConstructor
-public class UserController implements GenericController<UserReq, UserResponse, Long> {
+public class UserController implements GenericController<UserReq, UserBasicResponse, Long> {
 
     @Override
-    public ResponseEntity<UserResponse> create(UserReq request) {
+    public ResponseEntity<UserBasicResponse> create(UserReq request) {
         return null;
     }
 
     @Override
-    public ResponseEntity<UserResponse> get(Long id) {
+    public ResponseEntity<UserBasicResponse> get(Long id) {
         return null;
     }
 
     @Override
-    public ResponseEntity<UserResponse> update(UserResponse request, Long id) {
+    public ResponseEntity<UserBasicResponse> update(UserBasicResponse request, Long id) {
         return null;
     }
 
     @Override
-    public ResponseEntity<UserResponse> delete(Long id) {
+    public ResponseEntity<UserBasicResponse> delete(Long id) {
         return null;
     }
 }

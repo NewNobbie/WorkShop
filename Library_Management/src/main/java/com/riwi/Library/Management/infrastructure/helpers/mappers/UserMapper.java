@@ -1,7 +1,7 @@
 package com.riwi.Library.Management.infrastructure.helpers.mappers;
 
-import com.riwi.Library.Management.api.request.UserReq;
-import com.riwi.Library.Management.api.response.UserResponse;
+import com.riwi.Library.Management.api.dtos.request.UserReq;
+import com.riwi.Library.Management.api.dtos.response.UserBasicResponse;
 import com.riwi.Library.Management.domain.entities.User;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -15,11 +15,11 @@ public interface UserMapper {
 
     @Mapping(target = "id",ignore = true)
     @Mapping(target = "loans",ignore = true)
-    @Mapping(target = "resevations",ignore = true)
+    @Mapping(target = "reservations",ignore = true)
     User toUserEntity(UserReq userReq);
 
     @InheritInverseConfiguration
-    UserResponse toUserResponse(User user);
+    UserBasicResponse toUserResponse(User user);
 
-    List<UserResponse> UserListToResponseList(List<User> users);
+    List<UserBasicResponse> UserListToResponseList(List<User> users);
 }
